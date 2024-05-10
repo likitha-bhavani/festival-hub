@@ -1,0 +1,62 @@
+body{
+    font-family: 'Montserrat';
+
+text-align: justify;
+
+max-width: 100%;
+padding:10%;
+background-image:url("yes.jpg") ;
+background-repeat: no-repeat;
+background-size: cover; /* or contain, or a specific size */
+background-position: center center; 
+
+}
+h1 {
+    margin: 2rem 0;
+    color: #b70d95;
+    font-weight: bold;
+    background-color: aliceblue;
+   text-align:center;
+  }
+  
+.text{
+
+font-size: 30px;
+color:rgb(15, 16, 17)
+
+}
+
+.moreText{
+
+display: none;
+
+}
+
+
+.read-more-btn{
+
+    padding: 15px 60px;
+    
+    background-color:
+    
+    rgb(149, 170, 197);
+    
+    color:rgb(53, 49, 49);
+    
+    border: none;
+    
+    outline: none;
+    
+    font-size: 20px;
+    
+    cursor: pointer;
+    
+    } .text.show-more .moreText{ display: inline;
+    
+    }
+    
+    .text.show-more .dots{
+    
+    display: none;
+    
+    }

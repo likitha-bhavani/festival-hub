@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="diwstyle.css" />
+        <link
+            href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script>
+            const close=document.querySelector(".close"); 
+            const open=document.querySelector(".ham");
+            const menu=document.querySelector(".menu") 
+             close.addEventListener("click",()=>
+             { 
+   menu.style.visibility="hidden";
+    }) open.addEventListener("click",()=>{ 
+   menu.style.visibility="visible";  })
+           </script>
+    </head>
+    <body>
+        
+        <header>
+            
+            <div class="logo"><a href="#">DIWALI</a></div>
+            <a href="culture.html" class="btn btn-primary">Back</a>
+        </header>
+        
+        <section>
+            <div class="section">
+                <div class="section1">
+                    <div class="img-slider">
+                        <img
+                            src="h.jpg"
+                            alt="festival"
+                            class="img"
+                        />
+                        <img
+                            src="k.jpg"
+                            alt="pongal"
+                            class="img"
+                        />
+
+                       <img
+                            src="j.jpg"
+                            alt=""
+                            class="img"
+                        />
+                        <img
+                            src="g.jpg"
+                            alt=""
+                            class="img"
+                        />
+                        <img
+                            src="m.jpg"
+                            alt=""
+                            class="img"
+                        />
+                    </div>
+                </div>
+        </div>
+        <section id="about">
+            <div class="about-wrapper container">
+                <div class="about-text">
+                    <h3 class="small">Diwali</h3>
+                    <h2>Diwali festival</h2>
+                    <p>
+                     
+                        Diwali is primarily celebrated in India, where it holds significant cultural, religious, and social importance. It is one of the most widely observed festivals in the country and is celebrated by people of various religious and cultural backgrounds. Additionally, Diwali is also celebrated by Indian communities around the world, making it a global festival. In regions with a significant Indian diaspora, such as Nepal, Sri Lanka, Malaysia, Singapore, and various countries in the Middle East, North America, Europe, and beyond, Diwali is observed with enthusiasm and various cultural traditions.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+        <div class="button">
+            <a href="#container" class="btn">VISIT</a>
+            
+
+        </div>
+        <div class="container" id="container">
+
+            <h1 class="heading">Diwali is celebrated all States</h1>
+         
+            <div class="box-container">
+         
+               
+              
+         
+               <div class="box">
+                  <div class="image">
+                     <img src="p.jpg" alt="">
+                  </div>
+                  <div class="content">
+                     <h3>IN whole INDIA</h3>
+                     <p> Diwali, also known as Deepavali, is a Hindu festival celebrated with great enthusiasm and joy. The festival spans five days and usually falls between October and November, depending on the Hindu lunar calendar. Here is an overview of the Diwali celebration:</p>
+                     <a href="https://en.wikipedia.org/wiki/Diwali" class="btn">read more</a>
+                     
+                  </div>
+               </div>
+         
+               
+         
+               
+         
+            </div>
+         
+            <div id="load-more"> load more </div>
+         
+         </div>
+         
+         <script>
+         
+         let loadMoreBtn = document.querySelector('#load-more');
+         let currentItem = 3;
+         
+         loadMoreBtn.onclick = () =>{
+            let boxes = [...document.querySelectorAll('.container .box-container .box')];
+            for (var i = currentItem; i < currentItem + 3; i++){
+               boxes[i].style.display = 'inline-block';
+            }
+            currentItem += 3;
+         
+            if(currentItem >= boxes.length){
+               loadMoreBtn.style.display = 'none';
+            }
+         }
+         
+         </script>
+    </body>
+</html>

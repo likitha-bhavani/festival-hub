@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #111;
+      height: 100vh;
+      margin: 0; /* Remove default margin */
+      overflow: hidden; /* Prevent scrollbars */
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+
+    .wrapper img {
+	position: fixed;
+	bottom: -180px;
+	height: 150px;
+	width: 150px;
+	z-index: -1;
+	background-color: #18191f;
+	box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+	animation: animate 10s linear infinite;
+}
+.wrapper img:nth-child(1) {
+	left: 60px;
+	animation-delay: 0.6s;
+}
+.wrapper img:nth-child(2) {
+	left: 10%;
+	animation-delay: 3s;
+	width: 60px;
+	height: 60px;
+}
+.wrapper img:nth-child(3) {
+	left: 20%;
+	animation-delay: 2s;
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper img:nth-child(4) {
+	left: 30%;
+	animation-delay: 5s;
+	width: 80px;
+	height: 80px;
+}
+.wrapper img:nth-child(5) {
+	left: 40%;
+	animation-delay: 1s;
+    box-shadow: 0 0 50px #18ba6c, 0 0 100px #18ba66, 0 0 150px #18ba18, 0 0 200px #18ba61;}
+.wrapper img:nth-child(6) {
+	left: 50%;
+	animation-delay: 7s;
+    box-shadow: 0 0 50px #a2ba18, 0 0 100px #b7ba18, 0 0 150px #9aba18, 0 0 200px #a2ba18;
+}
+.wrapper img:nth-child(7) {
+	left: 60%;
+	animation-delay: 6s;
+	width: 100px;
+	height: 100px;
+    
+}
+.wrapper img:nth-child(8) {
+	left: 70%;
+	animation-delay: 8s;
+    box-shadow: 0 0 50px #ba189f, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper img:nth-child(9) {
+	left: 80%;
+	animation-delay: 6s;
+	width: 90px;
+	height: 90px;
+}
+.wrapper img:nth-child(10) {
+	left: 90%;
+	animation-delay: 4s;
+    box-shadow: 0 0 50px #ba1889, 0 0 100px #ba1889, 0 0 150px #ba189f, 0 0 200px #ba18af;
+}
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #16a083;
+  align-items: center;
+
+}
+
+.btn-primary:hover {
+  align-items: center;
+  display: flex;
+  background: #e8f837;
+  color:blue;
+  transition: background 0.5s ease-in-out;
+}
+    /* Add more styling for other images as needed */
+
+    .banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .wrapper span {
+	position: fixed;
+ bottom:0px;
+	height: 50px;
+	width: 50px;
+	z-index: -1;
+	background-color: #18191f;
+	box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+}
+.wrapper span:nth-child(1) {
+	left: 60px;
+}
+.wrapper span:nth-child(2) {
+	left: 10%;
+	width: 60px;
+	height: 60px;
+}
+.wrapper span:nth-child(3) {
+	left: 20%;
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper span:nth-child(4) {
+	left: 30%;
+	width: 80px;
+	height: 80px;
+}
+.wrapper span:nth-child(5) {
+	left: 40%;
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;}
+.wrapper span:nth-child(6) {
+	left: 50%;
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper span:nth-child(7) {
+	left: 60%;
+	width: 100px;
+	height: 100px;
+    
+}
+.wrapper span:nth-child(8) {
+	left: 70%;
+
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper span:nth-child(9) {
+	left: 80%;
+
+	width: 90px;
+	height: 90px;
+}
+.wrapper span:nth-child(10) {
+	left: 90%;
+
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper1 span {
+	position: fixed;
+ top:0px;
+	height: 50px;
+	width: 50px;
+	z-index: -1;
+	background-color: #18191f;
+	box-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff, 0 0 200px #0072ff;
+}
+.wrapper1 span:nth-child(1) {
+	left: 60px;
+}
+.wrapper1 span:nth-child(2) {
+	left: 10%;
+	width: 60px;
+	height: 60px;
+}
+.wrapper1 span:nth-child(3) {
+	left: 20%;
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper1 span:nth-child(4) {
+	left: 30%;
+	width: 80px;
+	height: 80px;
+}
+.wrapper1 span:nth-child(5) {
+	left: 40%;
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;}
+.wrapper1 span:nth-child(6) {
+	left: 50%;
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper1 span:nth-child(7) {
+	left: 60%;
+	width: 100px;
+	height: 100px;
+    
+}
+.wrapper1 span:nth-child(8) {
+	left: 70%;
+
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+.wrapper1 span:nth-child(9) {
+	left: 80%;
+
+	width: 90px;
+	height: 90px;
+}
+.wrapper1 span:nth-child(10) {
+	left: 90%;
+
+
+    box-shadow: 0 0 50px #ba181b, 0 0 100px #ba181b, 0 0 150px #ba181b, 0 0 200px #ba181b;
+}
+    .content h2 b {
+      font-family: montserrat;
+      font-size: 80px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 12px;
+      color: #fff;
+    }
+    .content p {
+      font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      align-items:center;
+    }
+
+    @keyframes animate {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      80% {
+        opacity: .7;
+      }
+      100% {
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+      }
+    }  
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="https://i.postimg.cc/C1yJW0Hj/krish.jpg" alt="Image 1">
+    <img src="https://i.postimg.cc/KjvPw4L1/ganapati.jpg" alt="Image 2">
+    <img src="https://i.postimg.cc/LXhPHjqM/bathuku.jpg" alt="Image 1">
+    <img src="https://i.postimg.cc/R0tNbx05/img2.jpg" alt="Image 2">
+    <img src="https://i.postimg.cc/XJJFHDtw/raksha.jpg" alt="Image 1">
+    <img src="https://i.postimg.cc/QdrQZ6pL/holi.jpg" alt="Image 2">
+    <img src="https://i.postimg.cc/Wz8xMDmS/diwali.jpg" alt="Image 1">
+    <img src="https://i.postimg.cc/L80dhZvV/ganesh.jpg" alt="Image 2">
+    <img src="https://i.postimg.cc/L4G4w0rm/kri.jpg" alt="Image 1">
+    
+    <!-- Add more img elements with different images -->
+
+    <!-- Your existing span elements (or remove them if not needed) -->
+ 
+  </div>
+  <div class="wrapper">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <!-- Add more img elements with different images -->
+
+    <!-- Your existing span elements (or remove them if not needed) -->
+ 
+  </div>
+  <div class="wrapper1">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <!-- Add more img elements with different images -->
+
+    <!-- Your existing span elements (or remove them if not needed) -->
+ 
+  </div>
+
+  <div class="banner">
+    <div class="content">
+      <h2><b>FESTIVALS HUB</b></h2>
+      <p>Experience the Global Festivity Extravaganza!</p>
+            <a href="culture.html" class="btn btn-primary">Visit</a>
+    </div>
+  </div>
+</body>
+</html>

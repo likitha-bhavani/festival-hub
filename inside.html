@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="insidestyle.css">
+
+</head>
+<body>
+   
+<div class="container">
+
+   <h1 class="heading">Pongal in different States</h1>
+
+   <div class="box-container">
+
+      
+     
+
+      <div class="box">
+         <div class="image">
+            <img src="https://i.postimg.cc/fRGxbKts/pongal.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Andhra Pradesh and Telangana</h3>
+            <p> In these states, Pongal is celebrated with fervor, and the main focus is on preparing the Pongal dish. The festival is often observed as part of the larger Sankranti festivities, with people flying kites and participating in various cultural events.</p>
+            <a href="https://en.wikipedia.org/wiki/Pongal_(festival)" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="pong.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Karnataka</h3>
+            <p>Pongal is celebrated in rural areas of Karnataka, particularly 
+                in the southern parts of the state. The festival involves the worship of the sun god and cattle, similar to the traditions in Tamil Nadu.Pongal, celebrated in mid-January, signifies the conclusion of the winter solstice and marks the beginning of the harvest season.</p>
+            <a href="https://www.bangaloreorbit.com/festivals-in-karnataka/makar-sankranti-festival/makar-sankranti-festival.html" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+      <div class="box">
+         <div class="image">
+            <img src="pon.jpg" alt="">
+         </div>
+         <div class="content">
+            <h3>Tamil Nadu</h3>
+            <p> Pongal is a major festival in Tamil Nadu and is 
+                celebrated over four days.Thai Pongal, the main day, involves the preparation of a special dish called "Pongal" to mark the end of the winter solstice.
+
+                Mattu Pongal, the third day, is dedicated to the worship of cattle, expressing gratitude for their role in agriculture.</p>
+            <a href="https://www.savaari.com/blog/one-festival-many-names-the-makar-sankranti/" class="btn">read more</a>
+            
+         </div>
+      </div>
+
+
+      
+
+   </div>
+
+   <div id="load-more"> load more </div>
+
+</div>
+
+<script>
+
+let loadMoreBtn = document.querySelector('#load-more');
+let currentItem = 3;
+
+loadMoreBtn.onclick = () =>{
+   let boxes = [...document.querySelectorAll('.container .box-container .box')];
+   for (var i = currentItem; i < currentItem + 3; i++){
+      boxes[i].style.display = 'inline-block';
+   }
+   currentItem += 3;
+
+   if(currentItem >= boxes.length){
+      loadMoreBtn.style.display = 'none';
+   }
+}
+
+</script>
+
+</body>
+</html>
